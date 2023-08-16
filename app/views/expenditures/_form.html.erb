@@ -21,10 +21,23 @@
     <%= form.text_field :amount %>
   </div>
 
-  <div>
-    <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id %>
-  </div>
+  <%# <div> %>
+    <%# <%= form.label :expense_id, style: "display: block" %> 
+    <%# <%= form.text_field :expense_id %> 
+  <%# </div> %>
+
+<div>
+<p> Choose One or More Expense category for this expenditure</p>
+<div>
+ <% @expenses.each do |expense| %>
+            <% checked = expense.id.to_i == params[:expense_id].to_i ? { checked: true } : {} %>
+            <div>
+                <%= form.check_box :expense_ids, { multiple: true}.merge(checked), expense.id, nil%>
+                
+                <%= label_tag "expense_#{expense.id}", expense.name %>
+            </div>
+  <% end %>
+   </div>
 
   <div>
     <%= form.submit %>

@@ -1,17 +1,17 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
+<div class='expense-card'>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= expense.icon %>
-  </p>
+  <%= image_tag expense.icon, alt: expense.name %>
+  
+  <div class='expense-detail'>
+   <div class='expense-detail-top'>
+     <p><%= expense.name %></p>
+     <p>$1500</p>
+  </div>
 
-  <p>
-    <strong>Author:</strong>
-    <%= expense.author_id %>
-  </p>
+  <div class='expense-detail-bottom'>
+    <p><%= expense.created_at.strftime('%d %B %Y') %></p>
+    <%= link_to "Show this expense", expense %>
+   </div>
+  </div>
 
 </div>

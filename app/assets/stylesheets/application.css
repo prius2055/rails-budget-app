@@ -13,3 +13,94 @@
  *= require_tree .
  *= require_self
  */
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media (min-width: 320px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .expenses {
+    position: relative;
+    border: 2px solid #ddd;
+    height: 100vh;
+  }
+
+  .expense-heading {
+    color: white;
+    padding: 20px;
+    background-color: #3778c2;
+  }
+
+  .expense-heading h1 {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .expense-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 95%;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+  }
+
+  .expense-card img {
+    width: 20%;
+  }
+
+  .expense-detail {
+    width: 80%;
+  }
+
+  .expense-detail-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .expense-detail-bottom {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .expenses-footer {
+    position: fixed;
+    bottom: 0;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #5fb523;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  .new-expense-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 95%;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-expense-detail {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  .new-expense-detail input{
+    width: 100%;
+    padding: 10px;
+  }
+}

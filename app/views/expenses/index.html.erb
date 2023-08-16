@@ -1,20 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<%# <p style="color: green"><%= notice</p> %>
 
+  <div class="expenses">
+   <% if user_signed_in? %>
 
-
-<% if user_signed_in? %>
-  <h1>Expenses</h1>
-  <div id="expenses">
+   <div class='expense-heading'>
+    <h1>Expenses</h1>
+   </div>
+   
     <% @expenses.each do |expense| %>
       <%= render expense %>
-      <p>
-        <%= link_to "Show this expense", expense %>
-      </p>
     <% end %>
-  </div>
-  <%= link_to "New expense", new_expense_path %>
-  <%= button_to( "Log Out",destroy_user_session_path, method: :delete) %>
 
-<% else %>
-  <%= button_to "Sign in", new_user_session_path %> 
-<% end %>
+   <%= link_to "Add New expense", new_expense_path, class:'expenses-footer' %>
+   <%# <%= button_to( "Log Out",destroy_user_session_path, method: :delete) %> 
+
+   <% else %>
+    <%= button_to "Sign in", new_user_session_path %> 
+   <% end %>
+  </div>

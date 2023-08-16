@@ -2,9 +2,28 @@
 
 <%= render @expense %>
 
+<% @expense.expenditures do |expenditure| %>
+  <div class='expense-card'>
+    <h2>Expenditure No</h2>
+    <p><%= @expenditure.name%></p>
+    <p><%= @expenditure.amount%></p>
+
+    <div>
+     <h2>TOTAL PAYMENT</h2>
+     <p>17</p>
+    </div>
+
+    <%= button_to "Destroy this expenditure", @expense, method: :delete %>
+    <%= link_to "Edit this expense", edit_expense_path(@expense) %> |
+ 
+  </div>
+
+<% end %>
+
 <div>
-  <%= link_to "Edit this expense", edit_expense_path(@expense) %> |
+
   <%= link_to "Back to expenses", expenses_path %>
 
-  <%= button_to "Destroy this expense", @expense, method: :delete %>
+  
 </div>
+ <%= link_to "Add New Expenditure", new_expenditure_path, class:'expenses-footer' %>
