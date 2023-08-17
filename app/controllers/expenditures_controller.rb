@@ -22,26 +22,15 @@ class ExpendituresController < ApplicationController
   # POST /expenditures or /expenditures.json
   def create
     @expenditure = Expenditure.new(name: params[:expenditure][:name], amount: params[:expenditure][:amount], author_id: current_user.id)
+    
     if params[:expenditure][:expense_ids]
       if save_expenses_and_expenditures
-        redirect_to expense_path(params[:expense_id])
+        redirect_to expense_path(params[:expenditure][:expense_ids].first)
       else
         render :new, status: :unprocessable_entity
       end
     else
-      # flash.now[:alert] = 'please select at least one checkbox.'
-      # render :new, status: :unprocessable_entity
       redirect_to expenditures_expenses_path(params[:expense_id]), alert: 'please select at least one expense category.'
-    end
-
-    respond_to do |format|
-      if @expenditure.save
-        format.html { redirect_to expenditure_url(@expenditure), notice: 'Expenditure was successfully created.' }
-        format.json { render :show, status: :created, location: @expenditure }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @expenditure.errors, status: :unprocessable_entity }
-      end
     end
   end
 
@@ -70,11 +59,13 @@ class ExpendituresController < ApplicationController
 
   private
 
+  
+
   def save_expenses_and_expenditures
     ActiveRecord::Base.transaction do
       @expenditure.save
       params[:expenditure][:expense_ids].each do |id|
-        ExpendituresExpenses.create(expenditure_id: @expenditure.id, expense_id: id.to_i)
+        ExpendituresExpense.create(expenditure_id: @expenditure.id, expense_id: id.to_i)
       end
     end
   rescue ActiveRecord::RecordInvalid
