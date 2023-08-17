@@ -1,17 +1,27 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= expense.icon %>
-  </p>
 
-  <p>
-    <strong>Author:</strong>
-    <%= expense.author_id %>
-  </p>
+  
+  <div class='expense-detail-container'>
+    <img src= "<%=expense.icon%>" , alt = "<%=expense.name%>" width='100', height='100' %>
+    
+    <div class='expense-detail'>
+      <div class='expense-detail-top'>
+        <p><%= expense.name %></p>
+        
+        <% totalAmount = 0 %>
+        <% expense.expenditures.each do |expenditure| %>
+          <% totalAmount += expenditure.amount %>
+        <% end %>
+        <p><%= totalAmount %></p>
+     
+      </div>
 
-</div>
+      <div class='expense-detail-bottom'>
+        <p><%= expense.created_at.strftime('%d %B %Y') %></p>
+        <%= link_to "Show this expense", expense %>
+      </div>
+
+    </div>
+
+  </div>
+

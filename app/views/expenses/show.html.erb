@@ -1,10 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @expense %>
+<div class='expenditure-card'>
 
-<div>
-  <%= link_to "Edit this expense", edit_expense_path(@expense) %> |
-  <%= link_to "Back to expenses", expenses_path %>
+  <div class='description'>
+     <%= image_tag @expense.icon, alt: @expense.name %>
+     <p><%= @expense.name %></p>
+     
+  </div>
 
-  <%= button_to "Destroy this expense", @expense, method: :delete %>
+  <% totalAmount = 0 %>
+  <% @expense.expenditures.each do |expenditure| %>
+
+   <div class='expenditure-detail'>
+     <div class='expenditure-id'>
+       <div>
+         <p> Expenditure No:<%= expenditure.id%></p>
+         <p>Amount spent:$<%= expenditure.amount%></p>
+        </div>
+        <%= button_to "Delete", expenditure, method: :delete %>
+      </div>
+      <p><%= expenditure.created_at.strftime('%d %B %Y') %> at <%= expenditure.created_at.strftime('%I:%M %p') %></p>
+    </div>
+    <% totalAmount += expenditure.amount %>
+  <% end %>
+
+  <div class='tot-payment'>
+     <p>TOTAL PAYMENT:</p>
+     <h2>$<%= totalAmount%></h2>
+   </div>
 </div>
+
+
+<%= link_to "Back to expenses", expenses_path %>
+
+<%= link_to "Add New Expenditure", new_expenditure_path, class:'expenses-footer' %>

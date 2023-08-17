@@ -4,11 +4,30 @@
 
 <div id="expenditures">
   <% @expenditures.each do |expenditure| %>
-    <%= render expenditure %>
+    <%# <%= render expenditure %>
+
+  <div id="<%= dom_id expenditure %>">
     <p>
-      <%= link_to "Show this expenditure", expenditure %>
+      <strong>Name:</strong>
+      <%= expenditure.name %>
     </p>
-  <% end %>
-</div>
+
+    <p>
+      <strong>Amount:</strong>
+      <%= expenditure.amount %>
+    </p>
+
+    <p>
+      <strong>Author:</strong>
+      
+    </p>
+
+      </div>
+
+      <p>
+        <%= link_to "Show this expenditure", expenditure %>
+      </p>
+    <% end %>
+  </div>
 
 <%= link_to "New expenditure", new_expenditure_path %>

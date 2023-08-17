@@ -3,7 +3,8 @@ class ExpendituresController < ApplicationController
 
   # GET /expenditures or /expenditures.json
   def index
-    @expenditures = Expenditure.all
+    @expense = Expense.find(params[:expense_id])
+    @expenditures = @expense.expenditures
   end
 
   # GET /expenditures/1 or /expenditures/1.json
@@ -12,6 +13,7 @@ class ExpendituresController < ApplicationController
   # GET /expenditures/new
   def new
     @expenditure = Expenditure.new
+    @expenses = Expense.where(author_id: current_user.id)
   end
 
   # GET /expenditures/1/edit
@@ -19,16 +21,16 @@ class ExpendituresController < ApplicationController
 
   # POST /expenditures or /expenditures.json
   def create
-    @expenditure = Expenditure.new(expenditure_params)
-
-    respond_to do |format|
-      if @expenditure.save
-        format.html { redirect_to expenditure_url(@expenditure), notice: 'Expenditure was successfully created.' }
-        format.json { render :show, status: :created, location: @expenditure }
+    @expenditure = Expenditure.new(name: params[:expenditure][:name], amount: params[:expenditure][:amount], author_id: current_user.id)
+    
+    if params[:expenditure][:expense_ids]
+      if save_expenses_and_expenditures
+        redirect_to expense_path(params[:expenditure][:expense_ids].first)
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @expenditure.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
       end
+    else
+      redirect_to expenditures_expenses_path(params[:expense_id]), alert: 'please select at least one expense category.'
     end
   end
 
@@ -57,6 +59,19 @@ class ExpendituresController < ApplicationController
 
   private
 
+  
+
+  def save_expenses_and_expenditures
+    ActiveRecord::Base.transaction do
+      @expenditure.save
+      params[:expenditure][:expense_ids].each do |id|
+        ExpendituresExpense.create(expenditure_id: @expenditure.id, expense_id: id.to_i)
+      end
+    end
+  rescue ActiveRecord::RecordInvalid
+    false
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_expenditure
     @expenditure = Expenditure.find(params[:id])
@@ -64,6 +79,6 @@ class ExpendituresController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expenditure_params
-    params.require(:expenditure).permit(:name, :amount, :author_id)
+    params.require(:expenditure).permit(:name, :amount, :author_id, expense_ids: [])
   end
 end
