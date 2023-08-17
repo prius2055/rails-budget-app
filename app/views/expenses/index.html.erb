@@ -1,4 +1,4 @@
-<%# <p style="color: green"><%= notice</p> %>
+<%= button_to( "Log Out",destroy_user_session_path, method: :delete) %> 
 
   <div class="expense-card">
    <% if user_signed_in? %>
@@ -12,9 +12,9 @@
     <% end %>
 
    <%= link_to "Add New expense", new_expense_path, class:'expenses-footer' %>
-   <%# <%= button_to( "Log Out",destroy_user_session_path, method: :delete) %> 
 
    <% else %>
-    <%= button_to "Sign in", new_user_session_path %> 
+    
+    <%= button_to "Sign in", new_user_session_path %>  
    <% end %>
   </div>

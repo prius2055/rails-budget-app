@@ -57,7 +57,7 @@
   .expense-card img {
     width: 20%;
   }
-  
+
   .expense-detail-container {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 100%;
@@ -66,7 +66,7 @@
     justify-content: space-between;
     padding: 15px 25px;
   }
-  
+
   .expense-detail {
     width: 70%;
     display: flex;
@@ -134,10 +134,9 @@
     border-bottom: 1px solid #ddd;
   }
 
-   .expenditure-detail {
-  
+  .expenditure-detail {
     margin-bottom: 20px;
-     border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 
   .expenditure-id {
@@ -146,9 +145,65 @@
     margin-bottom: 10px;
   }
 
-   .tot-payment {
-  display: flex;
-  justify-content: space-between;
+  .tot-payment {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
+  }
+
+  .homepage {
+    box-shadow: rgba(232, 232, 240, 0.2) 0px 7px 29px 0px;
+    width: 95%;
+    height: 90vh;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+  }
+
+  .homepage h1 {
+    font-family: 'Proxima Nova Bold', sans-serif;
+    width: 100%;
+    margin: 18% auto;
+    font-size: 55px;
+    text-align: center;
+  }
+
+  .homepage a {
+    text-decoration: none;
+    width: 100%;
+    margin: 10px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .homepage .login {
+    background-color: #3778c2;
+    border: 1px solid #3778c2;
+    color: white;
+  }
+
+  .login-container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    margin: 15px auto;
+    padding: 15px 25px;
+  }
+
+  .login-container input {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 15px;
+    border: none;
+  }
+
+  .login-container h2 {
+    background-color: #3778c2;
+     padding: 10px;
+     text-align: center;
+     color: white;
   }
 }
