@@ -202,7 +202,7 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 100%;
     padding: 20px;
-    margin-top: 15px;
+    margin-top: 5px;
     border: none;
   }
 
@@ -230,21 +230,23 @@
     margin: 0;
     cursor: pointer;
     background-color: #3778c2;
+     color: white;
   }
 
   .pic-upload {
     width: 100%;
     display: flex;
+    align-items: center;
     cursor: pointer;
-    background-color: #3778c2;
+    padding: 20px;
+    margin-top: 5px;
   }
 
   .pic-upload div {
     margin-right: 10px;
-    background-color: #3778c2;
     border: 1px solid #434b54;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
   }
 }
