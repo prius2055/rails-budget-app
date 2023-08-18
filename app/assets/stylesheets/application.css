@@ -43,6 +43,11 @@
     background-color: #3778c2;
   }
 
+  .expense-heading a {
+    color: white;
+    text-decoration: none;
+  }
+
   .expense-heading h1 {
     text-align: center;
     margin-top: 0;
@@ -230,7 +235,7 @@
     margin: 0;
     cursor: pointer;
     background-color: #3778c2;
-     color: white;
+    color: white;
   }
 
   .pic-upload {
@@ -251,7 +256,7 @@
   }
 
   .forgot-password {
-  text-decoration: none;
-  margin-left: 45%;
+    text-decoration: none;
+    margin-left: 45%;
   }
 }
