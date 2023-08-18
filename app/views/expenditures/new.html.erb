@@ -1,9 +1,15 @@
+<div class='new-expense-card'>
+ <div class='expense-heading'>
 <h1>New expenditure</h1>
+</div>
 
+<div class='new-expense-detail'>
 <%= render "form", expenditure: @expenditure, expenses: @expenses %>
+</div>
 
-<br>
+
 
 <div>
   <%= link_to "Back to expenditures", expenditures_path %>
+</div>
 </div>
