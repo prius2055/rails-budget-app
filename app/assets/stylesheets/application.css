@@ -50,7 +50,7 @@
   }
 
   .expense-card {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 95%;
     margin: 25px auto;
     padding: 15px;
@@ -63,7 +63,7 @@
   }
 
   .expense-detail-container {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 100%;
     margin: 15px auto;
     display: flex;
@@ -94,7 +94,7 @@
     position: fixed;
     bottom: 0;
     color: white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     background-color: #5fb523;
     width: 100%;
     padding: 15px;
@@ -104,7 +104,7 @@
   }
 
   .new-expense-card {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 95%;
     margin: 25px auto;
     padding: 15px;
@@ -123,7 +123,7 @@
   }
 
   .expenditure-card {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 95%;
     margin: 25px auto;
     padding: 15px;
@@ -156,7 +156,7 @@
   }
 
   .homepage {
-    box-shadow: rgba(232, 232, 240, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(232, 232, 240, 0.2) 0 7px 29px 0;
     width: 95%;
     height: 90vh;
     margin: 25px auto;
@@ -191,14 +191,14 @@
   }
 
   .login-container {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 100%;
     margin: 15px auto;
     padding: 15px 25px;
   }
 
   .login-container input {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     width: 100%;
     padding: 20px;
     margin-top: 15px;
