@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Expense, type: :request do
   before(:each) do
     @user = User.create(name: 'Leon', email: 'leon@gmail.com', password: '123456', password_confirmation: '123456')
-    @expense = Expense.create(name: 'KFC', icon: 'https://unsplash.com/photos/F_-0BxGuVvo', author_id:@user.id )
+    @expense = Expense.create(name: 'KFC', icon: 'https://unsplash.com/photos/F_-0BxGuVvo', author_id: @user.id)
   end
 
   it 'should return a successful response' do

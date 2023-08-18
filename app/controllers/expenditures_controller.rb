@@ -21,8 +21,9 @@ class ExpendituresController < ApplicationController
 
   # POST /expenditures or /expenditures.json
   def create
-    @expenditure = Expenditure.new(name: params[:expenditure][:name], amount: params[:expenditure][:amount], author_id: current_user.id)
-    
+    @expenditure = Expenditure.new(name: params[:expenditure][:name], amount: params[:expenditure][:amount],
+                                   author_id: current_user.id)
+
     if params[:expenditure][:expense_ids]
       if save_expenses_and_expenditures
         redirect_to expense_path(params[:expenditure][:expense_ids].first)
@@ -58,8 +59,6 @@ class ExpendituresController < ApplicationController
   end
 
   private
-
-  
 
   def save_expenses_and_expenditures
     ActiveRecord::Base.transaction do
