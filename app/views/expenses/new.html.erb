@@ -1,0 +1,13 @@
+<div class='new-expense-card'>
+  <div class='expense-heading'>
+    <h1>New expense</h1>
+  </div>
+
+  <div class='new-expense-detail'>
+  <%= render "form", expense: @expense%>
+  </div>
+
+  <div>
+   <%= link_to "Back to expenses", expenses_path %>
+  </div>
+</div>

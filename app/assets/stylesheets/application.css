@@ -1,0 +1,269 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media (min-width: 320px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #434b54;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+  }
+
+  .expenses {
+    position: relative;
+    border: 2px solid #ddd;
+    height: 100vh;
+  }
+
+  .expense-heading {
+    color: white;
+    padding: 20px;
+    background-color: #3778c2;
+  }
+
+  .expense-heading button {
+    color: white;
+    background-color: #3778c2;
+    border: none;
+    cursor: pointer;
+  }
+
+  .expense-heading a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .expense-heading h1 {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    color: white;
+  }
+
+  .expense-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    width: 95%;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .expense-card img {
+    width: 20%;
+  }
+
+  .expense-detail-container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    width: 100%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+  }
+
+  .expense-detail {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .expense-detail-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .expense-detail-bottom {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+
+  .expenses-footer {
+    position: fixed;
+    bottom: 0;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    background-color: #5fb523;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  .new-expense-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    width: 95%;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-expense-detail {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  .new-expense-detail input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .expenditure-card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    width: 95%;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .expenditure-detail {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .expenditure-id {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .tot-payment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .homepage {
+    box-shadow: rgba(232, 232, 240, 0.2) 0 7px 29px 0;
+    width: 95%;
+    height: 90vh;
+    margin: 25px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+  }
+
+  .homepage h1 {
+    font-family: 'Proxima Nova Bold', sans-serif;
+    width: 100%;
+    margin: 18% auto;
+    font-size: 55px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .homepage a {
+    text-decoration: none;
+    width: 100%;
+    margin: 10px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .homepage .login {
+    background-color: #3778c2;
+    border: 1px solid #3778c2;
+    color: white;
+  }
+
+  .login-container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    width: 100%;
+    margin: 15px auto;
+    padding: 15px 25px;
+  }
+
+  .login-container input {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
+    border: none;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3778c2;
+    padding: 10px;
+    color: white;
+  }
+
+  .actions h2 {
+    font-weight: 700;
+    color: white;
+  }
+
+  .actions a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .actions .form-action {
+    width: 10%;
+    margin: 0;
+    cursor: pointer;
+    background-color: #3778c2;
+    color: white;
+  }
+
+  .pic-upload {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 5px;
+  }
+
+  .pic-upload div {
+    margin-right: 10px;
+    border: 1px solid #434b54;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .forgot-password {
+    text-decoration: none;
+    margin-left: 45%;
+  }
+}

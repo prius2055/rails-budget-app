@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<div class='expenditure-card'>
+ <div class='expense-heading'>
+    <%= link_to "<<", expenses_path %>
+    <h1>EXPENDITURE</h1>
+  </div>
+
+  <div class='description'>
+     <%= image_tag @expense.icon, alt: @expense.name %>
+     <p><%= @expense.name %></p>
+     
+  </div>
+
+  <% totalAmount = 0 %>
+  <% @expense.expenditures.each do |expenditure| %>
+
+   <div class='expenditure-detail'>
+     <div class='expenditure-id'>
+       <div>
+         <p> Expenditure No:<%= expenditure.id%></p>
+         <p>Amount spent:$<%= expenditure.amount%></p>
+        </div>
+        <%= button_to "Delete", expenditure, method: :delete %>
+      </div>
+      <p><%= expenditure.created_at.strftime('%d %B %Y') %> at <%= expenditure.created_at.strftime('%I:%M %p') %></p>
+    </div>
+    <% totalAmount += expenditure.amount %>
+  <% end %>
+
+  <div class='tot-payment'>
+     <p>TOTAL PAYMENT:</p>
+     <h2>$<%= totalAmount%></h2>
+   </div>
+</div>
+
+<%= link_to "ADD NEW EXPENDITURE", new_expenditure_path, class:'expenses-footer' %>

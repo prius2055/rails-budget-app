@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Expenditures</h1>
+
+<div id="expenditures">
+  <% @expenditures.each do |expenditure| %>
+
+  <div id="<%= dom_id expenditure %>">
+    <p>
+      <strong>Name:</strong>
+      <%= expenditure.name %>
+    </p>
+
+    <p>
+      <strong>Amount:</strong>
+      <%= expenditure.amount %>
+    </p>
+
+    <p>
+      <strong>Author:</strong>
+      
+    </p>
+
+      </div>
+
+      <p>
+        <%= link_to "Show this expenditure", expenditure %>
+      </p>
+    <% end %>
+  </div>
+
+<%= link_to "New expenditure", new_expenditure_path %>
