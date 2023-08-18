@@ -43,6 +43,13 @@
     background-color: #3778c2;
   }
 
+  .expense-heading button {
+    color: white;
+    background-color: #3778c2;
+    border: none;
+    cursor: pointer;
+  }
+
   .expense-heading a {
     color: white;
     text-decoration: none;
