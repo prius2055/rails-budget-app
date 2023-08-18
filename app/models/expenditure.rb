@@ -3,7 +3,6 @@ class Expenditure < ApplicationRecord
   has_many :expenditures_expenses
   has_many :expenses, through: :expenditures_expenses
 
-
   validates :name, presence: true
   validates :amount, presence: true
 end
