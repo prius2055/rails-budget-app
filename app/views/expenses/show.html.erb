@@ -2,8 +2,9 @@
 
 <div class='expenditure-card'>
  <div class='expense-heading'>
+    <%= link_to "Back to expenses", expenses_path %>
     <h1>EXPENDITURE</h1>
-   </div>
+  </div>
 
   <div class='description'>
      <%= image_tag @expense.icon, alt: @expense.name %>
@@ -33,7 +34,4 @@
    </div>
 </div>
 
-
-<%= link_to "Back to expenses", expenses_path %>
-
-<%= link_to "Add New Expenditure", new_expenditure_path, class:'expenses-footer' %>
+<%= link_to "ADD NEW EXPENDITURE", new_expenditure_path, class:'expenses-footer' %>
