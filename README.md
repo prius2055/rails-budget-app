@@ -53,12 +53,14 @@
   **[Methods for updating models]**
   **[Methods for applying CRUD to models]**
   **[An expenses model that shows a list of expenditures]**
-  **[Unit spec for all validations and methods in models]**
-  **[Controllers for users and post models]**
-  **[Unit spec test for all request]**
-   **[Views to see actions on the application]**
+  **[Users can add new expenses]**
+   **[Users can add new expenditures to an expense group]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- Click [Live Demo](https://budgit.onrender.com/) to see the project
 
 <!-- GETTING STARTED -->
 
