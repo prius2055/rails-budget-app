@@ -251,8 +251,7 @@
   }
 
   .forgot-password {
-   margin-top: 5px;
   text-decoration: none;
-  text-align: center;
+  margin-left: 45%;
   }
 }
