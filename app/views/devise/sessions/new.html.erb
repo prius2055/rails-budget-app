@@ -11,13 +11,11 @@
 
   <div class="field">
    
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Passworc" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
   </div>
 
-  
-
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "form-action" %>
   </div>
 
 <% end %>
