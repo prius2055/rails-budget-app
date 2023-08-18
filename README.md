@@ -185,9 +185,10 @@ If you like this project, kindly drop a star for the project.
 
 I would like to thank the Microverse team for their support.
 
-I would also like to appreciate the creative commons team for the graphical design and inspiration
+I would also like to appreciate the [Creative commons](https://creativecommons.org/licenses/by-nc/4.0/) team for the inspiration
 
-Particular thanks goes to [Gregoire Vella](https://www.behance.net/gregoirevella) for the use of his design work
+Particular thanks goes to [Gregoire Vella](https://www.behance.net/gregoirevella) for the use of his design work.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->

@@ -9,13 +9,13 @@ describe Expense, type: :model do
 
 
     it 'name should be present' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
+      subject.name = nil
+      expect(subject).to_not be_valid
+    end
 
-  it 'icon should be less than 251 ch' do
-    subject.icon = nil
-    expect(subject).to_not be_valid
-  end
+    it 'icon should be less than 251 ch' do
+      subject.icon = nil
+      expect(subject).to_not be_valid
+    end
   end
 end

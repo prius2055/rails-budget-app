@@ -7,9 +7,7 @@ class ExpensesController < ApplicationController
   end
 
   # GET /expenses/1 or /expenses/1.json
-  def show
-    
-  end
+  def show; end
 
   # GET /expenses/new
   def new
@@ -23,7 +21,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.author_id = current_user.id
-    
+
     respond_to do |format|
       if @expense.save
         format.html { redirect_to expenses_url, notice: 'Expense was successfully created.' }
