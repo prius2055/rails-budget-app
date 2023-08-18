@@ -7,7 +7,6 @@ describe Expenditure, type: :model do
       Expense.create(author: first_user, name: 'Apple', amount: 2000)
     end
 
-
     it 'name should be present' do
       subject.name = nil
       expect(subject).to_not be_valid

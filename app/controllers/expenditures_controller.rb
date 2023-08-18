@@ -60,8 +60,6 @@ class ExpendituresController < ApplicationController
 
   private
 
-
-
   def save_expenses_and_expenditures
     ActiveRecord::Base.transaction do
       @expenditure.save
